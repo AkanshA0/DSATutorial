@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Queues - DSA Tutorials</title>
+  <meta name="description" content="Queues follow First In, First Out (FIFO). Enqueue adds to the end, dequeue removes from the front.">
+  <link rel="stylesheet" href="../assets/main.css">
+  <script defer src="../assets/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <a href="../" id="homeLink" class="brand">
+        <img src="../assets/logo.svg" alt="DSA Tutorials home" width="36" height="36">
+        <span>DSA Tutorials</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav">
+          <li><a href="../">Home</a></li>
+<li><a aria-current="page" href="#">Queues</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <div class="wrap">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="../">Home</a></li>
+          <li aria-current="page">Queues</li>
+        </ol>
+      </nav>
+      <h1>Queues</h1>
+      <figure class="topic-figure">
+        <img src="../assets/queues.svg" alt="Illustration of a queue: items in a line showing enqueue at the rear and dequeue at the front" width="560" height="112">
+        <figcaption>Illustration: queues follow First In, First Out (FIFO); items enter at the rear and exit at the front.</figcaption>
+      </figure>
+      <p>Queues follow First In, First Out (FIFO). Enqueue adds to the end, dequeue removes from the front.</p>
+      <h2>Example: Queues across languages</h2>
+      <div class="codeblock" data-lang="javascript">
+        <div class="codeblock-header">
+          <span class="lang">javascript</span>
+          <button class="copy-btn" aria-describedby="copy-status-js">Copy code</button>
+        </div>
+<pre><code>class Queue {
+  constructor() { this.items = []; this.head = 0; this.tail = 0; }
+  enqueue(x) { this.items[this.tail++] = x; }
+  dequeue() { return this.tail > this.head ? this.items[this.head++] : null; }
+  isEmpty() { return this.tail === this.head; }
+}</code></pre>
+        <p id="copy-status-js" class="sr-only" role="status" aria-live="polite"></p>
+      </div>
+      <div class="codeblock" data-lang="python">
+        <div class="codeblock-header">
+          <span class="lang">python</span>
+          <button class="copy-btn" aria-describedby="copy-status-py">Copy code</button>
+        </div>
+<pre><code>from collections import deque
+
+class Queue:
+    def __init__(self):
+        self.items = deque()
+
+    def enqueue(self, x):
+        self.items.append(x)
+
+    def dequeue(self):
+        return self.items.popleft() if self.items else None
+
+    def is_empty(self):
+        return len(self.items) == 0</code></pre>
+        <p id="copy-status-py" class="sr-only" role="status" aria-live="polite"></p>
+      </div>
+      <div class="codeblock" data-lang="java">
+        <div class="codeblock-header">
+          <span class="lang">java</span>
+          <button class="copy-btn" aria-describedby="copy-status-java">Copy code</button>
+        </div>
+<pre><code>import java.util.ArrayDeque;
+
+public class QueueDemo {
+  private ArrayDeque<Integer> items = new ArrayDeque<>();
+
+  public void enqueue(int x) { items.offer(x); }
+  public Integer dequeue() { return items.poll(); }
+  public boolean isEmpty() { return items.isEmpty(); }
+}</code></pre>
+        <p id="copy-status-java" class="sr-only" role="status" aria-live="polite"></p>
+      </div>
+      <h2>Quick quiz</h2>
+      <form class="quiz" data-correct="A" novalidate>
+        <fieldset>
+          <legend>A queue removes the oldest enqueued item first. True (A) or False (B)?</legend>
+          <div class="field">
+            <input type="radio" id="qA" name="q" value="A" required>
+            <label for="qA">A</label>
+          </div>
+          <div class="field">
+            <input type="radio" id="qB" name="q" value="B">
+            <label for="qB">B</label>
+          </div>
+        </fieldset>
+        <button type="submit">Check answer</button>
+        <p class="help quizStatus" role="status" aria-live="polite"></p>
+      </form>
+      <p><a href="#top">Back to top</a></p>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><a href="../">Home</a></p>
+    </div>
+  </footer>
+  <script>
+  // page-scoped quiz handler using shared status region
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('form.quiz').forEach(function(form) {
+      const status = form.querySelector('.quizStatus');
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const val = (new FormData(form)).get('q');
+        const correct = form.dataset.correct;
+        status.textContent = (val === correct) ? 'Correct.' : 'Try again.';
+      });
+    });
+  });
+  </script>
+</body>
+</html>

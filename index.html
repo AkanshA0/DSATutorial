@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DSA Tutorials</title>
+  <meta name="description" content="A small DSA tutorial site with examples and explanations.">
+  <link rel="stylesheet" href="assets/main.css">
+  <script defer src="assets/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <a href="./" id="homeLink" class="brand">
+        <img src="assets/logo.svg" alt="DSA Tutorials home" width="36" height="36">
+        <span>DSA Tutorials</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav">
+          <li><a href="./">Home</a></li>
+</ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="wrap">
+  <h1>Welcome</h1>
+  <p>This site provides data structures and algorithms basics with clear examples and explanations.</p>
+
+      <form class="site-search" role="search" aria-label="Site search" onsubmit="return false;">
+        <label for="q">Search topics</label>
+        <input id="q" name="q" type="search" autocomplete="off" placeholder="Type Search Topic" />
+        <button type="button" id="searchBtn">Search</button>
+      </form>
+
+      <h2>Topics</h2>
+      <ul id="topicList">
+<li><a href="tutorials/stacks.html">Stacks - push, pop, peek, complexity</a></li>
+  <li><a href="tutorials/queues.html">Queues - enqueue, dequeue, complexity</a></li>
+  <li><a href="tutorials/linkedlist.html">Linked Lists - nodes, traversal, complexity</a></li>
+      </ul>
+
+      <details class="callout">
+        <summary><span class="summary-text">What is DSA?</span></summary>
+        <div class="callout-body">
+          <p>Data Structures are special ways of organizing, storing, and managing data. Imagine a library. You wouldn't just throw all the books in one giant pile. You use shelves (a structure), categorize by genre, and have a system to find what you need quickly.
+            Algorithms are like the instructions or recipes that tell you how to do something with that data, like sorting books or finding a specific title efficiently.
+          </p>
+        </div>
+      </details>
+
+      <!-- Code sample section removed per deployment edits -->
+
+      
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+  <p>DSA Tutorials - examples and notes on common data structures and algorithms.</p>
+      <div id="announcer" class="sr-only" role="status" aria-live="polite"></div>
+    </div>
+  </footer>
+</body>
+</html>

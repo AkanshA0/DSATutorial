@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Linked Lists - DSA Tutorials</title>
+  <meta name="description" content="A singly linked list stores nodes that each reference the next node. Traversal visits nodes in order by following next references.">
+  <link rel="stylesheet" href="../assets/main.css">
+  <script defer src="../assets/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <a href="../" id="homeLink" class="brand">
+        <img src="../assets/logo.svg" alt="DSA Tutorials home" width="36" height="36">
+        <span>DSA Tutorials</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav">
+          <li><a href="../">Home</a></li>
+<li><a aria-current="page" href="#">Linked</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <div class="wrap">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="../">Home</a></li>
+          <li aria-current="page">Linked Lists</li>
+        </ol>
+      </nav>
+      <h1>Linked Lists</h1>
+      <figure class="topic-figure">
+        <img src="../assets/linkedlist.svg" alt="Illustration of a linked list: rounded nodes connected by arrows showing next pointers" width="560" height="112">
+        <figcaption>Illustration: linked lists consist of nodes that reference the next node in sequence.</figcaption>
+      </figure>
+      <p>A singly linked list stores nodes that each reference the next node. Traversal visits nodes in order by following next references.</p>
+      <h2>Example: Linked Lists across languages</h2>
+      <div class="codeblock" data-lang="javascript">
+        <div class="codeblock-header">
+          <span class="lang">javascript</span>
+          <button class="copy-btn" aria-describedby="copy-status-js">Copy code</button>
+        </div>
+<pre><code>class ListNode {
+  constructor(val, next=null) { this.val = val; this.next = next; }
+}
+function traverse(head) {
+  const out = [];
+  let cur = head;
+  while (cur) { out.push(cur.val); cur = cur.next; }
+  return out;
+}</code></pre>
+        <p id="copy-status-js" class="sr-only" role="status" aria-live="polite"></p>
+      </div>
+      <div class="codeblock" data-lang="python">
+        <div class="codeblock-header">
+          <span class="lang">python</span>
+          <button class="copy-btn" aria-describedby="copy-status-py">Copy code</button>
+        </div>
+<pre><code>class ListNode:
+    def __init__(self, val, next=None):
+        self.val = val
+        self.next = next
+
+def traverse(head):
+    out = []
+    cur = head
+    while cur:
+        out.append(cur.val)
+        cur = cur.next
+    return out</code></pre>
+        <p id="copy-status-py" class="sr-only" role="status" aria-live="polite"></p>
+      </div>
+      <div class="codeblock" data-lang="java">
+        <div class="codeblock-header">
+          <span class="lang">java</span>
+          <button class="copy-btn" aria-describedby="copy-status-java">Copy code</button>
+        </div>
+<pre><code>class ListNode {
+  int val;
+  ListNode next;
+  ListNode(int v) { val = v; }
+}
+
+public class LinkedListDemo {
+  public static int[] traverse(ListNode head) {
+    java.util.ArrayList<Integer> out = new java.util.ArrayList<>();
+    ListNode cur = head;
+    while (cur != null) { out.add(cur.val); cur = cur.next; }
+    return out.stream().mapToInt(i->i).toArray();
+  }
+}</code></pre>
+        <p id="copy-status-java" class="sr-only" role="status" aria-live="polite"></p>
+      </div>
+      <h2>Quick quiz</h2>
+      <form class="quiz" data-correct="A" novalidate>
+        <fieldset>
+          <legend>Linked lists provide O(1) insertion at the head when a reference is known. True (A) or False (B)?</legend>
+          <div class="field">
+            <input type="radio" id="qA" name="q" value="A" required>
+            <label for="qA">A</label>
+          </div>
+          <div class="field">
+            <input type="radio" id="qB" name="q" value="B">
+            <label for="qB">B</label>
+          </div>
+        </fieldset>
+        <button type="submit">Check answer</button>
+        <p class="help quizStatus" role="status" aria-live="polite"></p>
+      </form>
+      <p><a href="#top">Back to top</a></p>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><a href="../">Home</a></p>
+    </div>
+  </footer>
+  <script>
+  // page-scoped quiz handler using shared status region
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('form.quiz').forEach(function(form) {
+      const status = form.querySelector('.quizStatus');
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const val = (new FormData(form)).get('q');
+        const correct = form.dataset.correct;
+        status.textContent = (val === correct) ? 'Correct.' : 'Try again.';
+      });
+    });
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="120" viewBox="0 0 600 120" role="img" aria-labelledby="llTitle llDesc">
+  <title id="llTitle">Linked list illustration</title>
+  <desc id="llDesc">A sequence of connected nodes represented by rounded boxes with arrows pointing to the next node.</desc>
+  <rect width="600" height="120" fill="#fbfdff"/>
+  <g font-family="Segoe UI, Roboto, Arial">
+    <rect x="30" y="30" width="120" height="50" rx="8" fill="#fff" stroke="#e6eef6"/>
+    <rect x="170" y="30" width="120" height="50" rx="8" fill="#fff" stroke="#e6eef6"/>
+    <rect x="310" y="30" width="120" height="50" rx="8" fill="#fff" stroke="#e6eef6"/>
+    <g stroke="#546a75" stroke-width="2" fill="none">
+      <path d="M150 55 L170 55" marker-end="url(#arr)"/>
+      <path d="M290 55 L310 55" marker-end="url(#arr)"/>
+    </g>
+    <defs>
+      <marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+        <path d="M0 0 L6 3 L0 6 z" fill="#546a75"/>
+      </marker>
+    </defs>
+    <g fill="#0b2536" font-weight="600" text-anchor="middle">
+      <text x="90" y="60">node</text>
+      <text x="230" y="60">node</text>
+      <text x="370" y="60">node</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arrays Tutorial - DSA Tutorials</title>
+  <meta name="description" content="Arrays tutorial with examples and explanations.">
+  <link rel="stylesheet" href="../assets/main.css">
+  <script defer src="../assets/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <a href="../" id="homeLink" class="brand">
+        <img src="../assets/logo.svg" alt="DSA Tutorials home" width="36" height="36">
+        <span>DSA Tutorials</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav">
+          <li><a href="../">Home</a></li>
+          <li><a aria-current="page" href="./arrays.html">Arrays</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="wrap">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="../">Home</a></li>
+          <li aria-current="page">Arrays</li>
+        </ol>
+      </nav>
+
+      <h1>Arrays</h1>
+      <figure class="topic-figure">
+        <img src="../assets/arrays.svg" alt="Illustration of an array: boxes labeled with indices from zero to five in a horizontal row" width="560" height="112">
+        <figcaption>Illustration: arrays store elements in contiguous memory, indexed by position.</figcaption>
+      </figure>
+      <p>Arrays store items in contiguous memory and allow O(1) random access by index.</p>
+
+      <h2>Common operations</h2>
+      <ul>
+  <li>Read by index - O(1)</li>
+  <li>Insert/delete at end - amortized O(1)</li>
+  <li>Insert/delete at start/middle - O(n)</li>
+  <li>Search (linear) - O(n) or binary search - O(log n) on sorted arrays</li>
+      </ul>
+
+      <h2>Example: Two Sum across languages</h2>
+
+      <div class="codeblock" data-lang="javascript">
+        <div class="codeblock-header">
+          <span class="lang">javascript</span>
+          <button class="copy-btn" aria-describedby="copy-status-2">Copy code</button>
+        </div>
+<pre><code>function twoSum(nums, target) {
+  const seen = new Map();
+  for (let i = 0; i &lt; nums.length; i++) {
+    const complement = target - nums[i];
+    if (seen.has(complement)) return [seen.get(complement), i];
+    seen.set(nums[i], i);
+  }
+  return null;
+}</code></pre>
+        <p id="copy-status-2" class="sr-only" role="status" aria-live="polite"></p>
+      </div>
+
+      <div class="codeblock" data-lang="python">
+        <div class="codeblock-header">
+          <span class="lang">python</span>
+          <button class="copy-btn" aria-describedby="copy-status-3">Copy code</button>
+        </div>
+<pre><code>def two_sum(nums, target):
+    seen = {}
+    for i, num in enumerate(nums):
+        complement = target - num
+        if complement in seen:
+            return [seen[complement], i]
+        seen[num] = i
+    return None</code></pre>
+        <p id="copy-status-3" class="sr-only" role="status" aria-live="polite"></p>
+      </div>
+
+      <div class="codeblock" data-lang="java">
+        <div class="codeblock-header">
+          <span class="lang">java</span>
+          <button class="copy-btn" aria-describedby="copy-status-4">Copy code</button>
+        </div>
+<pre><code>import java.util.HashMap;
+import java.util.Map;
+
+public class TwoSum {
+  public static int[] twoSum(int[] nums, int target) {
+    Map&lt;Integer, Integer&gt; seen = new HashMap&lt;&gt;();
+    for (int i = 0; i &lt; nums.length; i++) {
+      int complement = target - nums[i];
+      if (seen.containsKey(complement)) {
+        return new int[]{ seen.get(complement), i };
+      }
+      seen.put(nums[i], i);
+    }
+    return null;
+  }
+}</code></pre>
+        <p id="copy-status-4" class="sr-only" role="status" aria-live="polite"></p>
+      </div>
+
+      <h2>Quick quiz</h2>
+      <form id="quiz" novalidate>
+        <fieldset>
+          <legend>Binary search works only when the array is:</legend>
+          <div class="field">
+            <input type="radio" id="q1a" name="q1" value="sorted" required>
+            <label for="q1a">Sorted</label>
+          </div>
+          <div class="field">
+            <input type="radio" id="q1b" name="q1" value="unsorted">
+            <label for="q1b">Unsorted</label>
+          </div>
+        </fieldset>
+        <button type="submit">Check answer</button>
+        <p id="quizStatus" class="help" role="status" aria-live="polite"></p>
+      </form>
+
+      <p><a href="#top">Back to top</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><a href="../">Home</a> • <a href="./arrays.html" aria-current="page">Arrays</a></p>
+    </div>
+  </footer>
+</body>
+</html>

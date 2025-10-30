@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="120" viewBox="0 0 600 120" role="img" aria-labelledby="arraysTitle arraysDesc">
+  <title id="arraysTitle">Array illustration</title>
+  <desc id="arraysDesc">A horizontal row of labeled boxes showing contiguous array indices from 0 to 5.</desc>
+  <rect x="0" y="0" width="600" height="120" fill="#fbfdff"/>
+  <!-- boxes -->
+  <g font-family="Segoe UI, Roboto, Arial" font-size="14">
+    <rect x="20" y="30" width="80" height="50" fill="#e6eef6" stroke="#d0e3ff" stroke-width="2" rx="6"/>
+    <rect x="110" y="30" width="80" height="50" fill="#e6eef6" stroke="#d0e3ff" stroke-width="2" rx="6"/>
+    <rect x="200" y="30" width="80" height="50" fill="#e6eef6" stroke="#d0e3ff" stroke-width="2" rx="6"/>
+    <rect x="290" y="30" width="80" height="50" fill="#e6eef6" stroke="#d0e3ff" stroke-width="2" rx="6"/>
+    <rect x="380" y="30" width="80" height="50" fill="#e6eef6" stroke="#d0e3ff" stroke-width="2" rx="6"/>
+    <rect x="470" y="30" width="80" height="50" fill="#e6eef6" stroke="#d0e3ff" stroke-width="2" rx="6"/>
+    <g fill="#0b2536" font-weight="600" text-anchor="middle">
+      <text x="60" y="60">0</text>
+      <text x="150" y="60">1</text>
+      <text x="240" y="60">2</text>
+      <text x="330" y="60">3</text>
+      <text x="420" y="60">4</text>
+      <text x="510" y="60">5</text>
+    </g>
+  </g>
+</svg>

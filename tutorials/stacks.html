@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stacks - DSA Tutorials</title>
+  <meta name="description" content="Stacks follow Last In, First Out (LIFO). Push adds to the top, pop removes from the top, peek reads without removing.">
+  <link rel="stylesheet" href="../assets/main.css">
+  <script defer src="../assets/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <a href="../" id="homeLink" class="brand">
+        <img src="../assets/logo.svg" alt="DSA Tutorials home" width="36" height="36">
+        <span>DSA Tutorials</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav">
+          <li><a href="../">Home</a></li>
+<li><a aria-current="page" href="#">Stacks</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <div class="wrap">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="../">Home</a></li>
+          <li aria-current="page">Stacks</li>
+        </ol>
+      </nav>
+      <h1>Stacks</h1>
+      <figure class="topic-figure">
+        <img src="../assets/stacks.svg" alt="Illustration of a stack: vertical boxes showing push adds to the top and pop removes from the top" width="240" height="160">
+        <figcaption>Illustration: stacks follow Last In, First Out (LIFO); push and pop operate on the top.</figcaption>
+      </figure>
+      <p>Stacks follow Last In, First Out (LIFO). Push adds to the top, pop removes from the top, peek reads without removing.</p>
+      <h2>Example: Stacks across languages</h2>
+      <div class="codeblock" data-lang="javascript">
+        <div class="codeblock-header">
+          <span class="lang">javascript</span>
+          <button class="copy-btn" aria-describedby="copy-status-js">Copy code</button>
+        </div>
+<pre><code>class Stack {
+  constructor() { this.items = []; }
+  push(x) { this.items.push(x); }
+  pop() { return this.items.length ? this.items.pop() : null; }
+  peek() { return this.items.length ? this.items[this.items.length - 1] : null; }
+  isEmpty() { return this.items.length === 0; }
+}</code></pre>
+        <p id="copy-status-js" class="sr-only" role="status" aria-live="polite"></p>
+      </div>
+      <div class="codeblock" data-lang="python">
+        <div class="codeblock-header">
+          <span class="lang">python</span>
+          <button class="copy-btn" aria-describedby="copy-status-py">Copy code</button>
+        </div>
+<pre><code>class Stack:
+    def __init__(self):
+        self.items = []
+
+    def push(self, x):
+        self.items.append(x)
+
+    def pop(self):
+        return self.items.pop() if self.items else None
+
+    def peek(self):
+        return self.items[-1] if self.items else None
+
+    def is_empty(self):
+        return len(self.items) == 0</code></pre>
+        <p id="copy-status-py" class="sr-only" role="status" aria-live="polite"></p>
+      </div>
+      <div class="codeblock" data-lang="java">
+        <div class="codeblock-header">
+          <span class="lang">java</span>
+          <button class="copy-btn" aria-describedby="copy-status-java">Copy code</button>
+        </div>
+<pre><code>import java.util.ArrayDeque;
+
+public class StackDemo {
+  private ArrayDeque<Integer> items = new ArrayDeque<>();
+
+  public void push(int x) { items.push(x); }
+  public Integer pop() { return items.isEmpty() ? null : items.pop(); }
+  public Integer peek() { return items.peek(); }
+  public boolean isEmpty() { return items.isEmpty(); }
+}</code></pre>
+        <p id="copy-status-java" class="sr-only" role="status" aria-live="polite"></p>
+      </div>
+      <h2>Quick quiz</h2>
+      <form class="quiz" data-correct="A" novalidate>
+        <fieldset>
+          <legend>A stack removes the most recently added item first. True (A) or False (B)?</legend>
+          <div class="field">
+            <input type="radio" id="qA" name="q" value="A" required>
+            <label for="qA">A</label>
+          </div>
+          <div class="field">
+            <input type="radio" id="qB" name="q" value="B">
+            <label for="qB">B</label>
+          </div>
+        </fieldset>
+        <button type="submit">Check answer</button>
+        <p class="help quizStatus" role="status" aria-live="polite"></p>
+      </form>
+      <p><a href="#top">Back to top</a></p>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><a href="../">Home</a></p>
+    </div>
+  </footer>
+  <script>
+  // page-scoped quiz handler using shared status region
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('form.quiz').forEach(function(form) {
+      const status = form.querySelector('.quizStatus');
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const val = (new FormData(form)).get('q');
+        const correct = form.dataset.correct;
+        status.textContent = (val === correct) ? 'Correct.' : 'Try again.';
+      });
+    });
+  });
+  </script>
+</body>
+</html>

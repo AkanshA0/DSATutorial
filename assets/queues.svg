@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="120" viewBox="0 0 600 120" role="img" aria-labelledby="qTitle qDesc">
+  <title id="qTitle">Queue illustration</title>
+  <desc id="qDesc">A horizontal queue showing items entering at the rear and leaving from the front with arrows indicating enqueue and dequeue.</desc>
+  <rect width="600" height="120" fill="#fbfdff"/>
+  <g font-family="Segoe UI, Roboto, Arial">
+    <rect x="40" y="35" width="70" height="50" rx="6" fill="#fff" stroke="#e6eef6"/>
+    <rect x="120" y="35" width="70" height="50" rx="6" fill="#fff" stroke="#e6eef6"/>
+    <rect x="200" y="35" width="70" height="50" rx="6" fill="#fff" stroke="#e6eef6"/>
+    <rect x="280" y="35" width="70" height="50" rx="6" fill="#fff" stroke="#e6eef6"/>
+    <g fill="#0b2536" font-weight="600" text-anchor="middle">
+      <text x="75" y="65">A</text>
+      <text x="155" y="65">B</text>
+      <text x="235" y="65">C</text>
+      <text x="315" y="65">D</text>
+    </g>
+    <!-- enqueue arrow (rear) -->
+    <path d="M380 60 L420 60" stroke="#0563e0" stroke-width="3" marker-end="url(#arr2)" fill="none"/>
+    <!-- dequeue arrow (front) -->
+    <path d="M10 60 L40 60" stroke="#ff6b6b" stroke-width="3" marker-end="url(#arr2)" fill="none"/>
+    <defs>
+      <marker id="arr2" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+        <path d="M0 0 L6 3 L0 6 z" fill="#0563e0"/>
+      </marker>
+    </defs>
+  </g>
+</svg>

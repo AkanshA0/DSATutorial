@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200" role="img" aria-labelledby="stTitle stDesc">
+  <title id="stTitle">Stack illustration</title>
+  <desc id="stDesc">A vertical stack of boxes showing push adding to the top and pop removing from the top.</desc>
+  <rect width="300" height="200" fill="#fbfdff"/>
+  <g font-family="Segoe UI, Roboto, Arial">
+    <rect x="110" y="30" width="80" height="36" rx="6" fill="#fff" stroke="#e6eef6"/>
+    <rect x="110" y="70" width="80" height="36" rx="6" fill="#fff" stroke="#e6eef6"/>
+    <rect x="110" y="110" width="80" height="36" rx="6" fill="#fff" stroke="#e6eef6"/>
+    <g fill="#0b2536" font-weight="600" text-anchor="middle">
+      <text x="150" y="54">top</text>
+      <text x="150" y="94"></text>
+      <text x="150" y="134">bottom</text>
+    </g>
+    <path d="M200 48 L240 48" stroke="#0563e0" stroke-width="3" marker-end="url(#arr3)"/>
+    <defs>
+      <marker id="arr3" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+        <path d="M0 0 L6 3 L0 6 z" fill="#0563e0"/>
+      </marker>
+    </defs>
+  </g>
+</svg>
